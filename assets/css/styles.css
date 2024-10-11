@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.ttf") format("ttf"),
+         url("../fonts/Poppins-SemiBold.ttf") format("ttf"),
+         url("../fonts/Poppins-Medium.ttf") format("truetype"),
+         url("../fonts/Poppins-Bold.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Agrandir";
+    src: url("../fonts/Agrandir-TextBold.otf") format("otf"),
+}
+
+:root {
+    --primary-color: #219ebc;
+    --secondary-color: #023047;
+    --accent-color-1: #ffb703;
+    --accent-color-2: #fb8500;
+    --background-color: #ffffff;
+    --text-color: #023047;
+}
+
+body {
+    background-image: url(../images/pexels-rickyrecap-1907785.jpg);
+    background-size: cover;
+    background-color: rgb(226, 247, 240);
+    font-family: "Poppins", "Arial", sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 70px 20px 20px; /* Adjusted padding */
+    overflow-x: hidden;
+}
+
+.product-card {
+    height: 100%;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    .product-card {
+        max-width: 100%;
+    }
+}
+
+.product-card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+@media (max-width: 575px) {
+    .product-card img {
+        height: 250px;
+    }
+}
+
+.product-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card .btn {
+    margin-top: auto;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color-1);
+    border-color: var(--accent-color-1);
+    color: var(--secondary-color);
+}
+
+.navbar {
+    background-color: var(--accent-color-1) !important;
+    padding-top: 0.3rem;    /* Reduced top padding */
+    padding-bottom: 0.3rem; /* Reduced bottom padding */
+}
+
+.navbar-brand {
+    font-family: "Agrandir", "Arial", sans-serif;
+    color: var(--text-color) !important;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.3rem;      /* Slightly reduced font size */
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.nav-link {
+    color: var(--background-color) !important;
+    font-size: 1.2rem;
+}
+
+.nav-link:hover {
+    color: var(--text-color) !important;
+}
+
+.card {
+    background-color: var(--background-color);
+    border-color: var(--primary-color);
+}
+
+.card-title {
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+.card-text {
+    color: var(--accent-color-2);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 575px) {
+    body {
+        padding: 10px;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+
+.container {
+    padding: 20px 15px;
+}
+
+@media (max-width: 575px) {
+    .container {
+        padding: 10px;
+    }
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.col-12, .col-sm-6, .col-lg-3 {
+    padding-right: 10px;
+    padding-left: 10px;
+}
